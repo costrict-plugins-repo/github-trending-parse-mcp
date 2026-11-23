@@ -1,0 +1,930 @@
+{
+  "evaluation": {
+    "backends": [
+      "markitdown",
+      "docling",
+      "llamaparse"
+    ],
+    "fixtures": [
+      {
+        "id": "memo_digital_pdf",
+        "doc_class": "digital_pdf",
+        "content": "prose",
+        "has_table": false,
+        "file": "memo_digital_pdf.pdf",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 471,
+            "latency_ms": 161,
+            "scores": {
+              "text": 0.9955654101995566,
+              "table": null,
+              "reading_order": 1.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 470,
+            "latency_ms": 12600,
+            "scores": {
+              "text": 0.9977876106194691,
+              "table": null,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "memo_scanned_pdf",
+        "doc_class": "scanned_pdf",
+        "content": "prose",
+        "has_table": false,
+        "file": "memo_scanned_pdf.pdf",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 0,
+            "latency_ms": 32,
+            "scores": {
+              "text": 0.0,
+              "table": null,
+              "reading_order": 0.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 455,
+            "latency_ms": 2406,
+            "scores": {
+              "text": 0.9977876106194691,
+              "table": null,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "memo_image_png",
+        "doc_class": "image",
+        "content": "prose",
+        "has_table": false,
+        "file": "memo_image_png.png",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 0,
+            "latency_ms": 20,
+            "scores": {
+              "text": 0.0,
+              "table": null,
+              "reading_order": 0.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 455,
+            "latency_ms": 2291,
+            "scores": {
+              "text": 0.9977876106194691,
+              "table": null,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "memo_image_jpg",
+        "doc_class": "image",
+        "content": "prose",
+        "has_table": false,
+        "file": "memo_image_jpg.jpg",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 0,
+            "latency_ms": 21,
+            "scores": {
+              "text": 0.0,
+              "table": null,
+              "reading_order": 0.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 455,
+            "latency_ms": 2944,
+            "scores": {
+              "text": 0.9977876106194691,
+              "table": null,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "financials_digital_pdf",
+        "doc_class": "table_heavy",
+        "content": "table",
+        "has_table": true,
+        "file": "financials_digital_pdf.pdf",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 438,
+            "latency_ms": 40,
+            "scores": {
+              "text": 0.9277456647398844,
+              "table": 1.0,
+              "reading_order": 1.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 491,
+            "latency_ms": 4343,
+            "scores": {
+              "text": 0.8879551820728291,
+              "table": 1.0,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "financials_scanned_pdf",
+        "doc_class": "scanned_pdf",
+        "content": "table",
+        "has_table": true,
+        "file": "financials_scanned_pdf.pdf",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 0,
+            "latency_ms": 28,
+            "scores": {
+              "text": 0.0,
+              "table": 0.0,
+              "reading_order": 0.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 491,
+            "latency_ms": 4955,
+            "scores": {
+              "text": 0.8879551820728291,
+              "table": 1.0,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "financials_image_png",
+        "doc_class": "image",
+        "content": "table",
+        "has_table": true,
+        "file": "financials_image_png.png",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 0,
+            "latency_ms": 31,
+            "scores": {
+              "text": 0.0,
+              "table": 0.0,
+              "reading_order": 0.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 491,
+            "latency_ms": 4513,
+            "scores": {
+              "text": 0.8879551820728291,
+              "table": 1.0,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "contract_digital_pdf",
+        "doc_class": "digital_pdf",
+        "content": "regulated",
+        "has_table": true,
+        "file": "contract_digital_pdf.pdf",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 589,
+            "latency_ms": 48,
+            "scores": {
+              "text": 0.8557213930348259,
+              "table": 0.0,
+              "reading_order": 1.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 679,
+            "latency_ms": 1037,
+            "scores": {
+              "text": 0.944794952681388,
+              "table": 1.0,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "contract_scanned_pdf",
+        "doc_class": "scanned_pdf",
+        "content": "regulated",
+        "has_table": true,
+        "file": "contract_scanned_pdf.pdf",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 0,
+            "latency_ms": 27,
+            "scores": {
+              "text": 0.0,
+              "table": 0.0,
+              "reading_order": 0.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 667,
+            "latency_ms": 2195,
+            "scores": {
+              "text": 0.944794952681388,
+              "table": 1.0,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "review_singlecol_pdf",
+        "doc_class": "digital_pdf",
+        "content": "multicolumn",
+        "has_table": false,
+        "file": "review_singlecol_pdf.pdf",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 811,
+            "latency_ms": 55,
+            "scores": {
+              "text": 0.9973118279569892,
+              "table": null,
+              "reading_order": 1.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 779,
+            "latency_ms": 699,
+            "scores": {
+              "text": 0.9986577181208054,
+              "table": null,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "review_multicolumn_pdf",
+        "doc_class": "multicolumn",
+        "content": "multicolumn",
+        "has_table": false,
+        "file": "review_multicolumn_pdf.pdf",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 816,
+            "latency_ms": 51,
+            "scores": {
+              "text": 0.353494623655914,
+              "table": null,
+              "reading_order": 0.14285714285714285
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 790,
+            "latency_ms": 542,
+            "scores": {
+              "text": 0.9986577181208054,
+              "table": null,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "invoice_digital_pdf",
+        "doc_class": "table_heavy",
+        "content": "table",
+        "has_table": true,
+        "file": "invoice_digital_pdf.pdf",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 477,
+            "latency_ms": 59,
+            "scores": {
+              "text": 0.9254079254079254,
+              "table": 1.0,
+              "reading_order": 1.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 513,
+            "latency_ms": 2205,
+            "scores": {
+              "text": 0.8972602739726028,
+              "table": 1.0,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "invoice_scanned_pdf",
+        "doc_class": "scanned_pdf",
+        "content": "table",
+        "has_table": true,
+        "file": "invoice_scanned_pdf.pdf",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 0,
+            "latency_ms": 28,
+            "scores": {
+              "text": 0.0,
+              "table": 0.0,
+              "reading_order": 0.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 604,
+            "latency_ms": 1812,
+            "scores": {
+              "text": 0.8200836820083682,
+              "table": 0.9545454545454546,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "invoice_image_png",
+        "doc_class": "image",
+        "content": "table",
+        "has_table": true,
+        "file": "invoice_image_png.png",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 0,
+            "latency_ms": 11,
+            "scores": {
+              "text": 0.0,
+              "table": 0.0,
+              "reading_order": 0.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 477,
+            "latency_ms": 1972,
+            "scores": {
+              "text": 0.8812351543942993,
+              "table": 0.7904216995126085,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "research_digital_pdf",
+        "doc_class": "digital_pdf",
+        "content": "mixed",
+        "has_table": true,
+        "file": "research_digital_pdf.pdf",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 474,
+            "latency_ms": 26,
+            "scores": {
+              "text": 0.9486607142857143,
+              "table": 1.0,
+              "reading_order": 1.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 510,
+            "latency_ms": 865,
+            "scores": {
+              "text": 0.925601750547046,
+              "table": 1.0,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      },
+      {
+        "id": "research_scanned_pdf",
+        "doc_class": "scanned_pdf",
+        "content": "mixed",
+        "has_table": true,
+        "file": "research_scanned_pdf.pdf",
+        "results": {
+          "markitdown": {
+            "status": "ok",
+            "output_len": 0,
+            "latency_ms": 16,
+            "scores": {
+              "text": 0.0,
+              "table": 0.0,
+              "reading_order": 0.0
+            }
+          },
+          "docling": {
+            "status": "ok",
+            "output_len": 510,
+            "latency_ms": 1996,
+            "scores": {
+              "text": 0.925601750547046,
+              "table": 1.0,
+              "reading_order": 1.0
+            }
+          },
+          "llamaparse": {
+            "status": "unavailable",
+            "output_len": 0,
+            "latency_ms": 0,
+            "scores": null
+          }
+        }
+      }
+    ],
+    "provenance": {
+      "python": "3.14.5",
+      "backend_versions": {
+        "markitdown": "0.1.5",
+        "docling": "2.93.0",
+        "llamaparse": null
+      },
+      "fixture_set_sha256": "a9156634583f6b60",
+      "n_fixtures": 16,
+      "docling_ocr_engine": "tesseract"
+    }
+  },
+  "aggregate": {
+    "classes": [
+      "digital_pdf",
+      "scanned_pdf",
+      "image",
+      "table_heavy",
+      "multicolumn"
+    ],
+    "by_class": {
+      "digital_pdf": {
+        "markitdown": {
+          "text": [
+            0.9493148363692715,
+            4
+          ],
+          "table": [
+            0.5,
+            2
+          ],
+          "reading_order": [
+            1.0,
+            4
+          ]
+        },
+        "docling": {
+          "text": [
+            0.9667105079921772,
+            4
+          ],
+          "table": [
+            1.0,
+            2
+          ],
+          "reading_order": [
+            1.0,
+            4
+          ]
+        },
+        "llamaparse": {
+          "text": [
+            null,
+            0
+          ],
+          "table": [
+            null,
+            0
+          ],
+          "reading_order": [
+            null,
+            0
+          ]
+        }
+      },
+      "scanned_pdf": {
+        "markitdown": {
+          "text": [
+            0.0,
+            5
+          ],
+          "table": [
+            0.0,
+            4
+          ],
+          "reading_order": [
+            0.0,
+            5
+          ]
+        },
+        "docling": {
+          "text": [
+            0.9152446355858201,
+            5
+          ],
+          "table": [
+            0.9886363636363636,
+            4
+          ],
+          "reading_order": [
+            1.0,
+            5
+          ]
+        },
+        "llamaparse": {
+          "text": [
+            null,
+            0
+          ],
+          "table": [
+            null,
+            0
+          ],
+          "reading_order": [
+            null,
+            0
+          ]
+        }
+      },
+      "image": {
+        "markitdown": {
+          "text": [
+            0.0,
+            4
+          ],
+          "table": [
+            0.0,
+            2
+          ],
+          "reading_order": [
+            0.0,
+            4
+          ]
+        },
+        "docling": {
+          "text": [
+            0.9411913894265167,
+            4
+          ],
+          "table": [
+            0.8952108497563043,
+            2
+          ],
+          "reading_order": [
+            1.0,
+            4
+          ]
+        },
+        "llamaparse": {
+          "text": [
+            null,
+            0
+          ],
+          "table": [
+            null,
+            0
+          ],
+          "reading_order": [
+            null,
+            0
+          ]
+        }
+      },
+      "table_heavy": {
+        "markitdown": {
+          "text": [
+            0.9265767950739049,
+            2
+          ],
+          "table": [
+            1.0,
+            2
+          ],
+          "reading_order": [
+            1.0,
+            2
+          ]
+        },
+        "docling": {
+          "text": [
+            0.8926077280227159,
+            2
+          ],
+          "table": [
+            1.0,
+            2
+          ],
+          "reading_order": [
+            1.0,
+            2
+          ]
+        },
+        "llamaparse": {
+          "text": [
+            null,
+            0
+          ],
+          "table": [
+            null,
+            0
+          ],
+          "reading_order": [
+            null,
+            0
+          ]
+        }
+      },
+      "multicolumn": {
+        "markitdown": {
+          "text": [
+            0.353494623655914,
+            1
+          ],
+          "table": [
+            null,
+            0
+          ],
+          "reading_order": [
+            0.14285714285714285,
+            1
+          ]
+        },
+        "docling": {
+          "text": [
+            0.9986577181208054,
+            1
+          ],
+          "table": [
+            null,
+            0
+          ],
+          "reading_order": [
+            1.0,
+            1
+          ]
+        },
+        "llamaparse": {
+          "text": [
+            null,
+            0
+          ],
+          "table": [
+            null,
+            0
+          ],
+          "reading_order": [
+            null,
+            0
+          ]
+        }
+      }
+    },
+    "overall": {
+      "markitdown": {
+        "text": [
+          0.3752442224550506,
+          16
+        ],
+        "table": [
+          0.3,
+          10
+        ],
+        "reading_order": [
+          0.38392857142857145,
+          16
+        ]
+      },
+      "docling": {
+        "text": [
+          0.936981496360632,
+          16
+        ],
+        "table": [
+          0.9744967154058063,
+          10
+        ],
+        "reading_order": [
+          1.0,
+          16
+        ]
+      },
+      "llamaparse": {
+        "text": [
+          null,
+          0
+        ],
+        "table": [
+          null,
+          0
+        ],
+        "reading_order": [
+          null,
+          0
+        ]
+      }
+    },
+    "latency": {
+      "overall": {
+        "markitdown": 29.5,
+        "docling": 2200.0,
+        "llamaparse": null
+      },
+      "by_class": {
+        "digital_pdf": {
+          "markitdown": 51.5,
+          "docling": 951.0,
+          "llamaparse": null
+        },
+        "scanned_pdf": {
+          "markitdown": 28,
+          "docling": 2195,
+          "llamaparse": null
+        },
+        "image": {
+          "markitdown": 20.5,
+          "docling": 2617.5,
+          "llamaparse": null
+        },
+        "table_heavy": {
+          "markitdown": 49.5,
+          "docling": 3274.0,
+          "llamaparse": null
+        },
+        "multicolumn": {
+          "markitdown": 51,
+          "docling": 542,
+          "llamaparse": null
+        }
+      }
+    }
+  },
+  "findings": {
+    "best_per_class": {
+      "digital_pdf": {
+        "winner": "docling",
+        "composites": {
+          "markitdown": 0.8164382787897572,
+          "docling": 0.988903502664059
+        }
+      },
+      "scanned_pdf": {
+        "winner": "docling",
+        "composites": {
+          "markitdown": 0.0,
+          "docling": 0.9679603330740613
+        }
+      },
+      "image": {
+        "winner": "docling",
+        "composites": {
+          "markitdown": 0.0,
+          "docling": 0.9454674130609403
+        }
+      },
+      "table_heavy": {
+        "winner": "markitdown",
+        "composites": {
+          "markitdown": 0.9755255983579683,
+          "docling": 0.964202576007572
+        }
+      },
+      "multicolumn": {
+        "winner": "docling",
+        "composites": {
+          "markitdown": 0.24817588325652842,
+          "docling": 0.9993288590604027
+        }
+      }
+    }
+  }
+}
